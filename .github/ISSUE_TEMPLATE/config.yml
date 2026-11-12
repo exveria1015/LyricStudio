@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: セキュリティに関する報告
+    url: https://github.com/exveria1015/LyricStudio/blob/main/SECURITY.md
+    about: 脆弱性の詳細を公開Issueへ投稿する前に、報告方法を確認してください。

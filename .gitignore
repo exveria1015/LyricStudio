@@ -1,0 +1,33 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.tsbuildinfo
+.DS_Store
+.local-backups/
+.venv-sudachi/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Local design/research material and reference screenshots are not published.
+/LyricStudio_Development_Spec*.md
+/references/
+/assets/
+/docs/*.png
+/docs/implementation-status.md
+/docs/p0-verification.md
+/docs/ruby-spike.md
+/docs/ui-design.md
+/docs/ui-contrast-audit.json
+
+# Personal exports and local credentials.
+*.lyrics.json
+*.lyrics-workspace.json
+*.pem
+*.p12
+*.pfx
+npm-debug.log*

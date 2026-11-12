@@ -1,0 +1,14 @@
+name: 改善の提案・質問
+description: 解決したいことや利用上の疑問を共有する
+body:
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 困っていること・知りたいこと
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 希望する動作・試したこと
+      description: 案がある場合は、現在の操作との違いも記載してください。

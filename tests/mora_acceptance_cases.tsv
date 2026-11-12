@@ -1,0 +1,18 @@
+id	type	text	reading	expected_mora	expected_syllables	expected_status
+M-001	kana	かな		2	0	complete
+M-002	kana	きゃ		1	0	complete
+M-003	kana	きょう		2	0	complete
+M-004	kana	がっこう		4	0	complete
+M-005	kana	スーパー		4	0	complete
+M-006	kana	ファイル		3	0	complete
+M-007	kana	しんじつ		4	0	complete
+M-008	kanji	明日		0	0	unresolved
+M-009	ruby	明日	あす	2	0	complete
+M-010	ruby	明日	あした	3	0	complete
+M-011	ruby	響く	ひびく	3	0	complete
+E-001	english	Break the night		0	3	complete
+E-002	ruby	Break	ブレイク	4	0	complete
+T-001	tag	[Chorus]		0	0	complete
+T-002	tag	[Whispered]		0	0	complete
+T-003	tag	[Custom Effect]		0	0	complete
+T-004	incomplete_tag	あお[Cho		2	0	unresolved

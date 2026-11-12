@@ -1,0 +1,56 @@
+/* Shared roles: panel dividers are softer than interactive control boundaries. */
+:root {
+  color-scheme: light;
+  --ui-text: #1e293b;
+  --ui-muted: #475569;
+  --ui-surface: #ffffff;
+  --ui-surface-subtle: #f3f5f8;
+  --ui-chrome: #e8edf3;
+  --ui-border: #b6c2d0;
+  --ui-control-border: #708094;
+  --ui-accent: #1d4ed8;
+  --ui-accent-hover: #1e40af;
+  --ui-accent-soft: #dbeafe;
+  --ui-warning: #8a470c;
+  --ui-warning-soft: #fff4db;
+  --ui-success: #14633c;
+  --ui-success-soft: #e4f4eb;
+  --ui-danger: #b42318;
+  --ui-danger-soft: #fef0ee;
+  --ui-purple: #6b21a8;
+  --ui-teal: #1d685d;
+  --ui-shadow-color: #0f172a1f;
+  --ui-backdrop: #0f172a66;
+}
+
+/* Explicit foreground preserves legibility when the selected text has a tag color. */
+::selection,
+.lyrics-editor ::selection {
+  color: var(--ui-text);
+  background: var(--ui-accent-soft);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[role="separator"]:focus-visible {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: 2px;
+}
+
+input::placeholder {
+  color: var(--ui-muted);
+  opacity: 1;
+}
+
+button:disabled,
+select:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}

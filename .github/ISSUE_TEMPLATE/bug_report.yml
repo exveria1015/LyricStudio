@@ -1,0 +1,27 @@
+name: 不具合の報告
+description: 再現手順と利用環境を共有する
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: 個人の歌詞や秘密情報は貼らず、公開可能な短い例を使ってください。脆弱性の詳細は公開せず、SECURITY.mdを確認してください。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 起きたこと・期待する動作
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 再現手順
+      description: 公開可能な最小の入力例と操作を記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 利用環境
+      description: OS、ブラウザー、Node.js、Python、アプリの版またはコミット、起動コマンド。
+    validations:
+      required: true

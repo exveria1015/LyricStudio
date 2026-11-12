@@ -1,0 +1,4 @@
+# V1 Full dictionary requires SudachiPy >= 0.7. Pin both: dictionary IDs and
+# candidate evidence must remain reproducible across sessions.
+SudachiPy==0.7.0
+SudachiDict-full==20261015

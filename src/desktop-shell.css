@@ -1,0 +1,74 @@
+.desktop-header {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 30;
+  background: var(--ui-chrome);
+  border-bottom: 1px solid var(--ui-control-border);
+}
+.desktop-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 4px 16px 4px 8px;
+}
+.desktop-titlebar .chrome-top { flex: 1; min-width: 0; }
+.document-heading { display: flex; align-items: center; gap: 18px; min-width: 0; }
+.document-heading .document-title { display: flex; flex: 1; min-width: 100px; padding-left: 16px; }
+.document-heading .document-title input {
+  width: 100%;
+  min-width: 60px;
+  max-width: 300px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 5px 7px;
+}
+.document-heading .document-title input:hover { border-color: var(--ui-control-border); background: var(--ui-surface); }
+.document-heading .document-title input:focus { background: var(--ui-surface); border-color: var(--ui-accent); }
+.document-heading .save-indicator { display: flex; font-size: 11px; }
+.desktop-toolbar {
+  min-height: 44px;
+  border-top: 1px solid var(--ui-border);
+  background: var(--ui-surface-subtle);
+  padding: 5px 12px;
+}
+.file-toolbar-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.file-toolbar-controls > button, .file-toolbar-controls .export-wrapper > button {
+  min-height: 31px;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  background: transparent;
+  border-color: transparent;
+  color: var(--ui-text);
+  box-shadow: none;
+}
+.file-toolbar-controls > button:hover, .file-toolbar-controls .export-wrapper > button:hover {
+  background: var(--ui-accent-soft);
+  border-color: var(--ui-accent);
+}
+.file-toolbar-controls > button svg { color: var(--ui-muted); }
+.toolbar-divider { width: 1px; height: 22px; background: var(--ui-border); margin: 0 4px; }
+.toolbar-context { display: flex; align-items: center; gap: 8px; margin-left: 12px; color: var(--ui-muted); font-size: 11px; }
+.toolbar-context strong { padding: 2px 5px; border-radius: 3px; background: var(--ui-accent-soft); color: var(--ui-accent); font-weight: 650; }
+.desktop-toolbar .export-menu { left: 0; right: auto; max-width: calc(100vw - 24px); }
+.studio-shell .compare-controls { margin-left: 0; padding-left: 10px; border-left: 1px solid var(--ui-border); }
+.desktop-toolbar button[aria-label="使い方"] { margin-left: 2px; }
+@media (max-width: 1150px) {
+  .desktop-titlebar { gap: 8px; padding-right: 10px; flex-wrap: wrap; }
+  .desktop-titlebar .chrome-top { flex-basis: 290px; }
+  .document-heading { gap: 10px; }
+  .document-heading .document-title { padding-left: 8px; }
+  .toolbar-context > span { display: none; }
+}
+@media (max-width: 700px) {
+  .desktop-titlebar { padding: 4px 8px; }
+  .desktop-titlebar .chrome-top { flex-basis: 100%; padding: 0 4px 4px; }
+  .document-heading .document-title { border-left: 0; padding-left: 0; }
+  .desktop-toolbar { padding: 4px 8px; }
+  .file-toolbar-controls { gap: 2px; }
+  .file-toolbar-controls > button, .file-toolbar-controls .export-wrapper > button { padding: 5px 6px; }
+  .toolbar-context { margin-left: 4px; }
+  .toolbar-divider { margin: 0 2px; }
+  .studio-shell .compare-controls { padding-left: 5px; }
+}

@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-10-20",
+  "engine": {
+    "package": "SudachiPy",
+    "version": "0.7.0",
+    "source": "https://pypi.org/project/SudachiPy/0.7.0/",
+    "license": "Apache-2.0"
+  },
+  "dictionary": {
+    "package": "SudachiDict-full",
+    "version": "20261015",
+    "edition": "full",
+    "format": "V1",
+    "source": "https://github.com/WorksApplications/SudachiDict",
+    "download": "https://d2ej7fkh96fzlu.cloudfront.net/sudachidict/v1/sudachi-dictionary-20261015-full.zip",
+    "archiveBytes": 137444817,
+    "installedBytes": 330506339,
+    "installedSha256": "7c797531dea76f06b629fad39cb3a5bdb3a9e54c67ef3d9a869e61418426a7d1",
+    "license": "Apache-2.0; see bundled LEGAL for UniDic and NEologd notices"
+  },
+  "runtime": {
+    "network": "loopback only",
+    "externalRequests": "none; setup downloads public packages and dictionary only",
+    "pythonTested": "3.14.4",
+    "platformTested": "Linux x86_64"
+  },
+  "limits": {
+    "textUtf16": 1024,
+    "requestBytes": 16384,
+    "exactEntries": 128,
+    "lookupCoverage": "Indexed entries after Sudachi input normalization; not an exhaustive scan of all dictionary rows."
+  }
+}

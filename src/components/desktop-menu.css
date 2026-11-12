@@ -1,0 +1,166 @@
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 8px;
+  color: var(--ui-text, #1e293b);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.desktop-menu button,
+.desktop-menu__layer button {
+  appearance: none;
+  font: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  cursor: default;
+}
+
+.desktop-menu__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 5px 3px 3px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--ui-muted, #475569);
+}
+
+.desktop-menu__brand {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--ui-accent, #1d4ed8);
+}
+
+.desktop-menu__bar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.desktop-menu__top {
+  padding: 6px 9px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ui-text, #1e293b);
+  white-space: nowrap;
+}
+
+.desktop-menu__logo:hover,
+.desktop-menu__top:hover {
+  background: var(--ui-chrome, #e8edf3);
+}
+
+.desktop-menu__logo[aria-expanded="true"],
+.desktop-menu__top[aria-expanded="true"] {
+  border-color: var(--ui-control-border, #708094);
+  background: var(--ui-accent-soft, #dbeafe);
+}
+
+.desktop-menu__layer {
+  color: var(--ui-text, #1e293b);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.desktop-menu__popup {
+  position: fixed;
+  z-index: 2000;
+  box-sizing: border-box;
+  width: max-content;
+  min-width: min(220px, calc(100vw - 16px));
+  max-width: min(360px, calc(100vw - 16px));
+  max-height: calc(100dvh - 16px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px;
+  border: 1px solid var(--ui-control-border, #708094);
+  border-radius: 6px;
+  background: var(--ui-surface, #fff);
+  color: var(--ui-text, #1e293b);
+  box-shadow: 0 7px 22px rgb(15 23 42 / 18%);
+  isolation: isolate;
+}
+
+.desktop-menu__command,
+.desktop-menu__category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 31px;
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--ui-text, #1e293b);
+  text-align: left;
+}
+
+.desktop-menu__category {
+  justify-content: space-between;
+  min-width: 200px;
+}
+
+.desktop-menu__check {
+  display: grid;
+  place-items: center;
+  flex: 0 0 15px;
+  width: 15px;
+  height: 16px;
+  color: var(--ui-accent, #1d4ed8);
+}
+
+.desktop-menu__label {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.desktop-menu__shortcut {
+  flex: 0 0 auto;
+  margin-left: 12px;
+  color: var(--ui-muted, #475569);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.desktop-menu__command:hover,
+.desktop-menu__command:focus,
+.desktop-menu__category:hover,
+.desktop-menu__category:focus,
+.desktop-menu__category[aria-expanded="true"] {
+  background: var(--ui-accent-soft, #dbeafe);
+}
+
+.desktop-menu__command[aria-disabled="true"] {
+  color: var(--ui-muted, #475569);
+  opacity: .65;
+}
+
+.desktop-menu__separator {
+  height: 0;
+  margin: 4px 8px;
+  border-top: 1px solid var(--ui-border, #b6c2d0);
+}
+
+.desktop-menu button:focus-visible,
+.desktop-menu__layer button:focus-visible {
+  outline: 2px solid var(--ui-accent, #1d4ed8);
+  outline-offset: -2px;
+}
+
+@media (forced-colors: active) {
+  .desktop-menu__popup { border-color: CanvasText; }
+  .desktop-menu__command[aria-disabled="true"] { color: GrayText; opacity: 1; }
+  .desktop-menu button:focus-visible,
+  .desktop-menu__layer button:focus-visible { outline-color: Highlight; }
+}
