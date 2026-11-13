@@ -7,6 +7,7 @@ export default ts.config(
     ignores: [
       "dist/**",
       "node_modules/**",
+      ".venv-sudachi/**",
       "playwright-report/**",
       "test-results/**",
       ".local-backups/**",
